@@ -1,17 +1,23 @@
 #include <Arduino.h>
 
+
 void setup(){
 
-pinMode(PC13,OUTPUT);
+    Serial.begin(9600);
+    while(!Serial){;}
 
-
+    pinMode(LED_GREEN, OUTPUT);
+    Serial.printf("helloWorld\n");
 }
 
 void loop(void){
 
-    digitalWrite(PC13,HIGH);
-    delay(1000);
-    digitalWrite(PC13,LOW);
-    delay(1000);
+  int sensorValue = analogRead(PA0);
+  // print out the value you read:
+  Serial.println(sensorValue);
 
+    delay(500);
+    digitalWrite(LED_GREEN,HIGH);
+    delay(500);
+    digitalWrite(LED_GREEN,LOW);
 }
