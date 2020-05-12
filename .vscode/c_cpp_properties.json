@@ -8,6 +8,7 @@
             "includePath": [
                 "/mnt/d/pio/bluepill/include",
                 "/mnt/d/pio/bluepill/src",
+                "/home/william/.platformio/packages/framework-arduinoststm32/libraries/Wire/src",
                 "/home/william/.platformio/packages/framework-arduinoststm32/cores/arduino/avr",
                 "/home/william/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32",
                 "/home/william/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/LL",
@@ -25,6 +26,10 @@
                 "/home/william/.platformio/packages/framework-arduinoststm32/system/Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc",
                 "/home/william/.platformio/packages/framework-arduinoststm32/cores/arduino",
                 "/home/william/.platformio/packages/framework-arduinoststm32/variants/PILL_F103XX",
+                "/mnt/d/pio/bluepill/.pio/libdeps/bluepill_f103c8/AsyncDelay_ID826/src",
+                "/mnt/d/pio/bluepill/.pio/libdeps/bluepill_f103c8/I2Cdevlib-ADS1115_ID95",
+                "/mnt/d/pio/bluepill/.pio/libdeps/bluepill_f103c8/I2Cdevlib-Core_ID11",
+                "/mnt/d/pio/bluepill/.pio/libdeps/bluepill_f103c8/SoftWire_ID586/src",
                 "/home/william/.platformio/packages/framework-arduinoststm32/libraries/CMSIS_DSP/src",
                 "/home/william/.platformio/packages/framework-arduinoststm32/libraries/EEPROM/src",
                 "/home/william/.platformio/packages/framework-arduinoststm32/libraries/IWatchdog/src",
@@ -34,7 +39,6 @@
                 "/home/william/.platformio/packages/framework-arduinoststm32/libraries/Servo/src",
                 "/home/william/.platformio/packages/framework-arduinoststm32/libraries/SoftwareSerial/src",
                 "/home/william/.platformio/packages/framework-arduinoststm32/libraries/SrcWrapper/src",
-                "/home/william/.platformio/packages/framework-arduinoststm32/libraries/Wire/src",
                 "/home/william/.platformio/packages/tool-unity",
                 ""
             ],
@@ -43,6 +47,7 @@
                 "path": [
                     "/mnt/d/pio/bluepill/include",
                     "/mnt/d/pio/bluepill/src",
+                    "/home/william/.platformio/packages/framework-arduinoststm32/libraries/Wire/src",
                     "/home/william/.platformio/packages/framework-arduinoststm32/cores/arduino/avr",
                     "/home/william/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32",
                     "/home/william/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/LL",
@@ -60,6 +65,10 @@
                     "/home/william/.platformio/packages/framework-arduinoststm32/system/Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc",
                     "/home/william/.platformio/packages/framework-arduinoststm32/cores/arduino",
                     "/home/william/.platformio/packages/framework-arduinoststm32/variants/PILL_F103XX",
+                    "/mnt/d/pio/bluepill/.pio/libdeps/bluepill_f103c8/AsyncDelay_ID826/src",
+                    "/mnt/d/pio/bluepill/.pio/libdeps/bluepill_f103c8/I2Cdevlib-ADS1115_ID95",
+                    "/mnt/d/pio/bluepill/.pio/libdeps/bluepill_f103c8/I2Cdevlib-Core_ID11",
+                    "/mnt/d/pio/bluepill/.pio/libdeps/bluepill_f103c8/SoftWire_ID586/src",
                     "/home/william/.platformio/packages/framework-arduinoststm32/libraries/CMSIS_DSP/src",
                     "/home/william/.platformio/packages/framework-arduinoststm32/libraries/EEPROM/src",
                     "/home/william/.platformio/packages/framework-arduinoststm32/libraries/IWatchdog/src",
@@ -69,7 +78,6 @@
                     "/home/william/.platformio/packages/framework-arduinoststm32/libraries/Servo/src",
                     "/home/william/.platformio/packages/framework-arduinoststm32/libraries/SoftwareSerial/src",
                     "/home/william/.platformio/packages/framework-arduinoststm32/libraries/SrcWrapper/src",
-                    "/home/william/.platformio/packages/framework-arduinoststm32/libraries/Wire/src",
                     "/home/william/.platformio/packages/tool-unity",
                     ""
                 ]

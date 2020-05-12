@@ -1,62 +1,70 @@
-/*
-  Serial Event example
+// I2C Digital Potentiometer
+// by Nicholas Zambetti <http://www.zambetti.com>
+// and Shawn Bonkowski <http://people.interaction-ivrea.it/s.bonkowski/>
 
-  When new serial data arrives, this sketch adds it to a String.
-  When a newline is received, the loop prints the string and clears it.
+// Demonstrates use of the Wire library
+// Controls AD5171 digital potentiometer via I2C/TWI
 
-  A good test for this is to try it with a GPS receiver that sends out
-  NMEA 0183 sentences.
+// Created 31 March 2006
 
-  NOTE: The serialEvent() feature is not available on the Leonardo, Micro, or
-  other ATmega32U4 based boards.
+// This example code is in the public domain.
 
-  created 9 May 2011
-  by Tom Igoe
-
-  This example code is in the public domain.
-
-  http://www.arduino.cc/en/Tutorial/SerialEvent
-*/
+// This example code is in the public domain.
 
 #include <Arduino.h>
+#include "../lib/Adafruit_ADS1X15/Adafruit_ADS1015.h"
+#include <Wire.h>
+// //#include "Adafruit_ADS1015.h"
+// void setup()
+// {
+//   Wire.begin(); // join i2c bus (address optional for master)
+// }
 
-String inputString = "";         // a String to hold incoming data
-bool stringComplete = false;  // whether the string is complete
+// byte val = 0;
 
-void setup() {
-  // initialize serial:
+// void loop()
+// {
+//   Wire.beginTransmission(44); // transmit to device #44 (0x2c)
+//                               // device address is specified in datasheet
+//   Wire.write(byte(0x00));            // sends instruction byte  
+//   Wire.write(val);             // sends potentiometer value byte  
+//   Wire.endTransmission();     // stop transmitting
+
+//   val++;        // increment value
+//   if(val == 64) // if reached 64th position (max)
+//   {
+//     val = 0;    // start over from lowest value
+//   }
+//   delay(500);
+// }
+
+Adafruit_ADS1015 ads1015;
+
+void setup(void)
+{
   Serial.begin(9600);
-  // reserve 200 bytes for the inputString:
-  inputString.reserve(200);
+  Serial.println("Hello!");
+  
+  Serial.println("Getting single-ended readings from AIN0..3");
+  Serial.println("ADC Range: +/- 6.144V (1 bit = 3mV)");
+  ads1015.begin();
+  //ads1015.setGain(GAIN_SIXTEEN);
 }
 
-void loop() {
-  // print the string when a newline arrives:
-  if (stringComplete) {
-    Serial.print(inputString);
-    Serial.println(inputString.toInt(),DEC);
-    Serial.println(55,DEC);
-    // clear the string:
-    inputString = "";
-    stringComplete = false;
-  }
-}
+  int16_t adc0, adc1, adc2, adc3;
+void loop(void)
+{
 
-/*
-  SerialEvent occurs whenever a new data comes in the hardware serial RX. This
-  routine is run between each time loop() runs, so using delay inside loop can
-  delay response. Multiple bytes of data may be available.
-*/
-void serialEvent() {
-  while (Serial.available()) {
-    // get the new byte:
-    char inChar = (char)Serial.read();
-    // add it to the inputString:
-    inputString += inChar;
-    // if the incoming character is a newline, set a flag so the main loop can
-    // do something about it:
-    if (inChar == '\n') {
-      stringComplete = true;
-    }
-  }
+  //adc0 = ads1015.readADC_SingleEnded(0);
+  //delay(1);
+  adc1 = ads1015.readADC_SingleEnded(1);
+  //adc2 = ads1015.readADC_SingleEnded(2);
+  //adc3 = ads1015.readADC_SingleEnded(3);
+  Serial.print("AIN0: "); Serial.println(adc0);
+  Serial.print("AIN1: "); Serial.println(adc1);
+  //Serial.print("AIN2: "); Serial.println(adc2);
+  //Serial.print("AIN3: "); Serial.println(adc3);
+  Serial.println(" ");
+  
+  delay(1000);
 }
