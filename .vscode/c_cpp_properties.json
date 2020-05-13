@@ -8,6 +8,7 @@
             "includePath": [
                 "/mnt/d/pio/bluepill/include",
                 "/mnt/d/pio/bluepill/src",
+                "/mnt/d/pio/bluepill/lib/Adafruit_ADS1X15",
                 "/home/william/.platformio/packages/framework-arduinoststm32/libraries/Wire/src",
                 "/home/william/.platformio/packages/framework-arduinoststm32/cores/arduino/avr",
                 "/home/william/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32",
@@ -47,6 +48,7 @@
                 "path": [
                     "/mnt/d/pio/bluepill/include",
                     "/mnt/d/pio/bluepill/src",
+                    "/mnt/d/pio/bluepill/lib/Adafruit_ADS1X15",
                     "/home/william/.platformio/packages/framework-arduinoststm32/libraries/Wire/src",
                     "/home/william/.platformio/packages/framework-arduinoststm32/cores/arduino/avr",
                     "/home/william/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32",
